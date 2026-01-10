@@ -1,0 +1,571 @@
+W0110 06:16:53.432812       1 feature_gate.go:352] Setting GA feature gate DynamicResourceAllocation=false. It will be removed in a future release.
+I0110 06:16:53.433324       1 main.go:369] Cluster Autoscaler 1.34.2
+I0110 06:16:53.542935       1 leaderelection.go:257] attempting to acquire leader lease kube-system/cluster-autoscaler...
+I0110 06:16:53.553348       1 leaderelection.go:271] successfully acquired lease kube-system/cluster-autoscaler
+I0110 06:16:53.553563       1 event_sink_logging_wrapper.go:48] Event(v1.ObjectReference{Kind:"Lease", Namespace:"kube-system", Name:"cluster-autoscaler", UID:"3f2c6def-28f4-4754-bf5d-9cafbee29377", APIVersion:"coordination.k8s.io/v1", ResourceVersion:"454127", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' cluster-autoscaler-68dbc8994d-xzn8k became leader
+I0110 06:16:53.630753       1 framework.go:412] "the scheduler starts to work with those plugins" Plugins={"PreEnqueue":{"Enabled":[{"Name":"SchedulingGates","Weight":0},{"Name":"DefaultPreemption","Weight":0}],"Disabled":null},"QueueSort":{"Enabled":[{"Name":"PrioritySort","Weight":0}],"Disabled":null},"PreFilter":{"Enabled":[{"Name":"NodeAffinity","Weight":0},{"Name":"NodePorts","Weight":0},{"Name":"NodeResourcesFit","Weight":0},{"Name":"VolumeRestrictions","Weight":0},{"Name":"NodeVolumeLimits","Weight":0},{"Name":"VolumeBinding","Weight":0},{"Name":"VolumeZone","Weight":0},{"Name":"PodTopologySpread","Weight":0},{"Name":"InterPodAffinity","Weight":0}],"Disabled":null},"Filter":{"Enabled":[{"Name":"NodeUnschedulable","Weight":0},{"Name":"NodeName","Weight":0},{"Name":"TaintToleration","Weight":0},{"Name":"NodeAffinity","Weight":0},{"Name":"NodePorts","Weight":0},{"Name":"NodeResourcesFit","Weight":0},{"Name":"VolumeRestrictions","Weight":0},{"Name":"NodeVolumeLimits","Weight":0},{"Name":"VolumeBinding","Weight":0},{"Name":"VolumeZone","Weight":0},{"Name":"PodTopologySpread","Weight":0},{"Name":"InterPodAffinity","Weight":0}],"Disabled":null},"PostFilter":{"Enabled":[{"Name":"DefaultPreemption","Weight":0}],"Disabled":null},"PreScore":{"Enabled":[{"Name":"TaintToleration","Weight":0},{"Name":"NodeAffinity","Weight":0},{"Name":"NodeResourcesFit","Weight":0},{"Name":"VolumeBinding","Weight":0},{"Name":"PodTopologySpread","Weight":0},{"Name":"InterPodAffinity","Weight":0},{"Name":"NodeResourcesBalancedAllocation","Weight":0}],"Disabled":null},"Score":{"Enabled":[{"Name":"TaintToleration","Weight":3},{"Name":"NodeAffinity","Weight":2},{"Name":"NodeResourcesFit","Weight":1},{"Name":"VolumeBinding","Weight":1},{"Name":"PodTopologySpread","Weight":2},{"Name":"InterPodAffinity","Weight":2},{"Name":"NodeResourcesBalancedAllocation","Weight":1},{"Name":"ImageLocality","Weight":1}],"Disabled":null},"Reserve":{"Enabled":[{"Name":"VolumeBinding","Weight":0}],"Disabled":null},"Permit":{"Enabled":null,"Disabled":null},"PreBind":{"Enabled":[{"Name":"VolumeBinding","Weight":0}],"Disabled":null},"Bind":{"Enabled":[{"Name":"DefaultBinder","Weight":0}],"Disabled":null},"PostBind":{"Enabled":null,"Disabled":null},"MultiPoint":{"Enabled":null,"Disabled":null}}
+I0110 06:16:53.642428       1 cloud_provider_builder.go:30] Building aws cloud provider.
+I0110 06:16:57.542105       1 aws_cloud_provider.go:453] Using static instance type x2gd.4xlarge
+I0110 06:16:57.542133       1 aws_cloud_provider.go:453] Using static instance type p5en.48xlarge
+I0110 06:16:57.542138       1 aws_cloud_provider.go:453] Using static instance type g6e.8xlarge
+I0110 06:16:57.542143       1 aws_cloud_provider.go:453] Using static instance type u7in-32tb.224xlarge
+I0110 06:16:57.542147       1 aws_cloud_provider.go:453] Using static instance type r7a.24xlarge
+I0110 06:16:57.542157       1 aws_cloud_provider.go:453] Using static instance type r7a.medium
+I0110 06:16:57.542161       1 aws_cloud_provider.go:453] Using static instance type x2gd.medium
+I0110 06:16:57.542164       1 aws_cloud_provider.go:453] Using static instance type vt1.6xlarge
+I0110 06:16:57.542169       1 aws_cloud_provider.go:453] Using static instance type c7a.large
+I0110 06:16:57.542175       1 aws_cloud_provider.go:453] Using static instance type hpc7g.8xlarge
+I0110 06:16:57.542178       1 aws_cloud_provider.go:453] Using static instance type x2iezn.metal
+I0110 06:16:57.542183       1 aws_cloud_provider.go:453] Using static instance type x2iezn.6xlarge
+I0110 06:16:57.542186       1 aws_cloud_provider.go:453] Using static instance type m5n.12xlarge
+I0110 06:16:57.542192       1 aws_cloud_provider.go:453] Using static instance type c7a.32xlarge
+I0110 06:16:57.542196       1 aws_cloud_provider.go:453] Using static instance type u7i-12tb.224xlarge
+I0110 06:16:57.542201       1 aws_cloud_provider.go:453] Using static instance type x2gd.large
+I0110 06:16:57.542204       1 aws_cloud_provider.go:453] Using static instance type c7a.metal-48xl
+I0110 06:16:57.542206       1 aws_cloud_provider.go:453] Using static instance type g4ad.2xlarge
+I0110 06:16:57.542214       1 aws_cloud_provider.go:453] Using static instance type c7a.16xlarge
+I0110 06:16:57.542218       1 aws_cloud_provider.go:453] Using static instance type u-18tb1.112xlarge
+I0110 06:16:57.542222       1 aws_cloud_provider.go:453] Using static instance type r7a.2xlarge
+I0110 06:16:57.542226       1 aws_cloud_provider.go:453] Using static instance type mac2.metal
+I0110 06:16:57.542230       1 aws_cloud_provider.go:453] Using static instance type h1.4xlarge
+I0110 06:16:57.542235       1 aws_cloud_provider.go:453] Using static instance type m5dn.metal
+I0110 06:16:57.542243       1 aws_cloud_provider.go:453] Using static instance type g5g.2xlarge
+I0110 06:16:57.542247       1 aws_cloud_provider.go:453] Using static instance type u-24tb1.112xlarge
+I0110 06:16:57.542250       1 aws_cloud_provider.go:453] Using static instance type c7gn.12xlarge
+I0110 06:16:57.542254       1 aws_cloud_provider.go:453] Using static instance type g4ad.16xlarge
+I0110 06:16:57.542257       1 aws_cloud_provider.go:453] Using static instance type r7iz.xlarge
+I0110 06:16:57.542260       1 aws_cloud_provider.go:453] Using static instance type x2gd.12xlarge
+I0110 06:16:57.542264       1 aws_cloud_provider.go:453] Using static instance type m5n.16xlarge
+I0110 06:16:57.542267       1 aws_cloud_provider.go:453] Using static instance type g6e.16xlarge
+I0110 06:16:57.542273       1 aws_cloud_provider.go:453] Using static instance type x2gd.xlarge
+I0110 06:16:57.542279       1 aws_cloud_provider.go:453] Using static instance type c7gn.8xlarge
+I0110 06:16:57.542282       1 aws_cloud_provider.go:453] Using static instance type g6e.48xlarge
+I0110 06:16:57.630019       1 aws_cloud_provider.go:453] Using static instance type x2gd.8xlarge
+I0110 06:16:57.630047       1 aws_cloud_provider.go:453] Using static instance type c7a.xlarge
+I0110 06:16:57.630052       1 aws_cloud_provider.go:453] Using static instance type c7a.12xlarge
+I0110 06:16:57.630056       1 aws_cloud_provider.go:453] Using static instance type x2iezn.12xlarge
+I0110 06:16:57.630060       1 aws_cloud_provider.go:453] Using static instance type m5n.large
+I0110 06:16:57.630064       1 aws_cloud_provider.go:453] Using static instance type g5g.metal
+I0110 06:16:57.630072       1 aws_cloud_provider.go:453] Using static instance type trn1.2xlarge
+I0110 06:16:57.630076       1 aws_cloud_provider.go:453] Using static instance type trn1n.32xlarge
+I0110 06:16:57.630081       1 aws_cloud_provider.go:453] Using static instance type vt1.24xlarge
+I0110 06:16:57.630084       1 aws_cloud_provider.go:453] Using static instance type x2gd.metal
+I0110 06:16:57.630087       1 aws_cloud_provider.go:453] Using static instance type m5dn.large
+I0110 06:16:57.630090       1 aws_cloud_provider.go:453] Using static instance type c7a.24xlarge
+I0110 06:16:57.630303       1 aws_cloud_provider.go:453] Using static instance type hpc7g.4xlarge
+I0110 06:16:57.630328       1 aws_cloud_provider.go:453] Using static instance type m5n.metal
+I0110 06:16:57.630332       1 aws_cloud_provider.go:453] Using static instance type c7a.4xlarge
+I0110 06:16:57.630345       1 aws_cloud_provider.go:453] Using static instance type g6e.xlarge
+I0110 06:16:57.630350       1 aws_cloud_provider.go:453] Using static instance type u-9tb1.112xlarge
+I0110 06:16:57.630359       1 aws_cloud_provider.go:453] Using static instance type m5dn.2xlarge
+I0110 06:16:57.630363       1 aws_cloud_provider.go:453] Using static instance type p3dn.24xlarge
+I0110 06:16:57.630367       1 aws_cloud_provider.go:453] Using static instance type x2iezn.4xlarge
+I0110 06:16:57.630371       1 aws_cloud_provider.go:453] Using static instance type r7a.xlarge
+I0110 06:16:57.630375       1 aws_cloud_provider.go:453] Using static instance type m5n.4xlarge
+I0110 06:16:57.630379       1 aws_cloud_provider.go:453] Using static instance type c7gn.medium
+I0110 06:16:57.630382       1 aws_cloud_provider.go:453] Using static instance type g6e.24xlarge
+I0110 06:16:57.630385       1 aws_cloud_provider.go:453] Using static instance type r7a.8xlarge
+I0110 06:16:57.630389       1 aws_cloud_provider.go:453] Using static instance type c7a.48xlarge
+I0110 06:16:57.630391       1 aws_cloud_provider.go:453] Using static instance type m5dn.16xlarge
+I0110 06:16:57.630395       1 aws_cloud_provider.go:453] Using static instance type x2iezn.8xlarge
+I0110 06:16:57.630399       1 aws_cloud_provider.go:453] Using static instance type m5dn.12xlarge
+I0110 06:16:57.630403       1 aws_cloud_provider.go:453] Using static instance type x2gd.2xlarge
+I0110 06:16:57.630407       1 aws_cloud_provider.go:453] Using static instance type hpc7g.16xlarge
+I0110 06:16:57.630428       1 aws_cloud_provider.go:453] Using static instance type g5g.xlarge
+I0110 06:16:57.630431       1 aws_cloud_provider.go:453] Using static instance type g4ad.4xlarge
+I0110 06:16:57.630434       1 aws_cloud_provider.go:453] Using static instance type c7gn.16xlarge
+I0110 06:16:57.630437       1 aws_cloud_provider.go:453] Using static instance type g5g.16xlarge
+I0110 06:16:57.630441       1 aws_cloud_provider.go:453] Using static instance type r7iz.large
+I0110 06:16:57.630443       1 aws_cloud_provider.go:453] Using static instance type g6e.2xlarge
+I0110 06:16:57.630449       1 aws_cloud_provider.go:453] Using static instance type m5dn.xlarge
+I0110 06:16:57.630452       1 aws_cloud_provider.go:453] Using static instance type g5g.8xlarge
+I0110 06:16:57.630454       1 aws_cloud_provider.go:453] Using static instance type u-12tb1.112xlarge
+I0110 06:16:57.630458       1 aws_cloud_provider.go:453] Using static instance type r7iz.12xlarge
+I0110 06:16:57.630460       1 aws_cloud_provider.go:453] Using static instance type h1.8xlarge
+I0110 06:16:57.630464       1 aws_cloud_provider.go:453] Using static instance type r7a.12xlarge
+I0110 06:16:57.630467       1 aws_cloud_provider.go:453] Using static instance type c7gn.2xlarge
+I0110 06:16:57.630470       1 aws_cloud_provider.go:453] Using static instance type m5n.xlarge
+I0110 06:16:57.630473       1 aws_cloud_provider.go:453] Using static instance type r7a.large
+I0110 06:16:57.630477       1 aws_cloud_provider.go:453] Using static instance type r7a.4xlarge
+I0110 06:16:57.630480       1 aws_cloud_provider.go:453] Using static instance type c7gn.4xlarge
+I0110 06:16:57.630483       1 aws_cloud_provider.go:453] Using static instance type g6e.4xlarge
+I0110 06:16:57.630486       1 aws_cloud_provider.go:453] Using static instance type x2gd.16xlarge
+I0110 06:16:57.630506       1 aws_cloud_provider.go:453] Using static instance type g4ad.xlarge
+I0110 06:16:57.630512       1 aws_cloud_provider.go:453] Using static instance type r7iz.8xlarge
+I0110 06:16:57.630515       1 aws_cloud_provider.go:453] Using static instance type p4de.24xlarge
+I0110 06:16:57.630518       1 aws_cloud_provider.go:453] Using static instance type c7gn.large
+I0110 06:16:57.630521       1 aws_cloud_provider.go:453] Using static instance type g5g.4xlarge
+I0110 06:16:57.630524       1 aws_cloud_provider.go:453] Using static instance type x2iezn.2xlarge
+I0110 06:16:57.630527       1 aws_cloud_provider.go:453] Using static instance type r7iz.16xlarge
+I0110 06:16:57.630530       1 aws_cloud_provider.go:453] Using static instance type m5n.24xlarge
+I0110 06:16:57.630533       1 aws_cloud_provider.go:453] Using static instance type c7a.2xlarge
+I0110 06:16:57.630536       1 aws_cloud_provider.go:453] Using static instance type r7a.32xlarge
+I0110 06:16:57.630542       1 aws_cloud_provider.go:453] Using static instance type mac2-m1ultra.metal
+I0110 06:16:57.630545       1 aws_cloud_provider.go:453] Using static instance type m5dn.4xlarge
+I0110 06:16:57.630548       1 aws_cloud_provider.go:453] Using static instance type r7iz.metal-16xl
+I0110 06:16:57.630551       1 aws_cloud_provider.go:453] Using static instance type m5n.8xlarge
+I0110 06:16:57.630556       1 aws_cloud_provider.go:453] Using static instance type r7iz.32xlarge
+I0110 06:16:57.630559       1 aws_cloud_provider.go:453] Using static instance type m5dn.24xlarge
+I0110 06:16:57.630563       1 aws_cloud_provider.go:453] Using static instance type g6e.12xlarge
+I0110 06:16:57.630566       1 aws_cloud_provider.go:453] Using static instance type c7a.8xlarge
+I0110 06:16:57.630616       1 aws_cloud_provider.go:453] Using static instance type m5dn.8xlarge
+I0110 06:16:57.630664       1 aws_cloud_provider.go:453] Using static instance type r7iz.4xlarge
+I0110 06:16:57.630694       1 aws_cloud_provider.go:453] Using static instance type r7a.16xlarge
+I0110 06:16:57.630735       1 aws_cloud_provider.go:453] Using static instance type u7i-8tb.112xlarge
+I0110 06:16:57.630777       1 aws_cloud_provider.go:453] Using static instance type r7iz.2xlarge
+I0110 06:16:57.630784       1 aws_cloud_provider.go:453] Using static instance type u7in-24tb.224xlarge
+I0110 06:16:57.630789       1 aws_cloud_provider.go:453] Using static instance type r7a.metal-48xl
+I0110 06:16:57.630792       1 aws_cloud_provider.go:453] Using static instance type vt1.3xlarge
+I0110 06:16:57.630798       1 aws_cloud_provider.go:453] Using static instance type r7a.48xlarge
+I0110 06:16:57.630802       1 aws_cloud_provider.go:453] Using static instance type h1.2xlarge
+I0110 06:16:57.630806       1 aws_cloud_provider.go:453] Using static instance type c7a.medium
+I0110 06:16:57.630809       1 aws_cloud_provider.go:453] Using static instance type c7gn.xlarge
+I0110 06:16:57.630812       1 aws_cloud_provider.go:453] Using static instance type m5n.2xlarge
+I0110 06:16:57.630819       1 aws_cloud_provider.go:453] Using static instance type g4ad.8xlarge
+I0110 06:16:57.630827       1 aws_cloud_provider.go:453] Using static instance type c7gn.metal
+I0110 06:16:57.630836       1 aws_cloud_provider.go:453] Using static instance type r7iz.metal-32xl
+I0110 06:16:57.630839       1 aws_cloud_provider.go:453] Using static instance type dl1.24xlarge
+I0110 06:16:57.630843       1 aws_cloud_provider.go:453] Using static instance type i3.metal
+I0110 06:16:57.630846       1 aws_cloud_provider.go:453] Using static instance type h1.16xlarge
+I0110 06:16:57.630873       1 aws_cloud_provider.go:463] Successfully load 972 EC2 Instance Types [r5ad.24xlarge c5.4xlarge m7i.8xlarge r5.8xlarge m6in.xlarge m5a.large r8i-flex.xlarge c5n.large c6i.8xlarge r6idn.metal hpc7g.4xlarge g6f.2xlarge r5.metal g6.xlarge r8i-flex.large r6id.2xlarge d3.8xlarge r5b.2xlarge m7a.medium c3.2xlarge r7gd.8xlarge r8gd.metal-24xl m6g.4xlarge m8g.12xlarge m5zn.xlarge x2iezn.6xlarge r7a.4xlarge h1.16xlarge c7i-flex.16xlarge r7g.metal m6g.metal t3.large c7g.medium m6a.16xlarge c5n.metal c8gd.metal-48xl r6g.12xlarge m6a.32xlarge g4ad.xlarge c7gn.xlarge m4.large m8i.xlarge m5n.12xlarge i3.metal c5n.4xlarge r5d.xlarge p3.16xlarge x8g.24xlarge m1.large c6i.32xlarge c6gd.xlarge r4.16xlarge c8gn.8xlarge m8i.8xlarge r6a.large mac2.metal m5dn.large m5.24xlarge mac1.metal m6a.12xlarge r7i.metal-48xl c7g.xlarge r5ad.2xlarge c6gn.8xlarge m8i-flex.8xlarge m8i.metal-48xl m6gd.xlarge c8gd.xlarge r7gd.12xlarge c6i.2xlarge r6idn.24xlarge m6id.metal r6i.12xlarge m6a.xlarge g6e.48xlarge r5a.xlarge c6in.24xlarge c8g.24xlarge m5ad.2xlarge c8gn.2xlarge r6idn.32xlarge r6i.large dl1.24xlarge u7i-6tb.112xlarge r8i.16xlarge c5n.9xlarge m8gd.12xlarge inf2.xlarge c5ad.12xlarge c5a.24xlarge m5zn.12xlarge c6gn.2xlarge r5.12xlarge g6.12xlarge m6in.32xlarge r8g.large c6gn.large c8g.16xlarge r7a.24xlarge g4ad.2xlarge x2iezn.12xlarge r7g.xlarge c6g.8xlarge x8g.12xlarge t2.2xlarge im4gn.8xlarge g5.16xlarge c7i-flex.12xlarge m8i.metal-96xl p5.4xlarge m6in.large r8gd.12xlarge m1.small x2iezn.metal x2gd.xlarge i7i.xlarge c5n.18xlarge g4dn.xlarge i3.large vt1.6xlarge c7gn.large r8i-flex.8xlarge r7i.12xlarge r7i.24xlarge i4i.8xlarge m8g.8xlarge c7g.8xlarge i7ie.12xlarge c6g.xlarge m8g.48xlarge m8g.metal-24xl r6gd.2xlarge m6i.32xlarge z1d.12xlarge m8i-flex.xlarge r8g.8xlarge c8gd.2xlarge m7a.32xlarge r5b.4xlarge r4.8xlarge c6id.4xlarge c5ad.24xlarge i4g.8xlarge r7i.8xlarge d3.2xlarge i8g.2xlarge c7gd.xlarge c6a.24xlarge g6.2xlarge r5dn.4xlarge c7a.16xlarge hpc6a.48xlarge m7a.large m5ad.large r8i-flex.2xlarge m7gd.8xlarge m5zn.metal r8gd.24xlarge r5d.8xlarge i3.16xlarge c7a.2xlarge c5ad.xlarge i4i.32xlarge g6e.4xlarge h1.2xlarge r6idn.xlarge i7i.2xlarge x2gd.12xlarge c7gd.12xlarge g5.48xlarge m6id.large vt1.3xlarge c4.8xlarge g4dn.12xlarge r7gd.large c7g.large g5.8xlarge m5a.xlarge m5dn.8xlarge m5a.4xlarge m6gd.medium r5.4xlarge c8gn.large t2.small m6idn.2xlarge z1d.6xlarge m8gd.16xlarge g5.xlarge i3en.xlarge m7i-flex.12xlarge c8gn.xlarge t3a.xlarge m4.4xlarge c6in.16xlarge c8g.2xlarge c5n.2xlarge c8gd.16xlarge i7ie.24xlarge z1d.2xlarge c8g.metal-24xl r6idn.4xlarge r6i.2xlarge t3.medium m6g.8xlarge m6g.large c7g.2xlarge m5ad.12xlarge r6a.32xlarge c7i.large c8gn.24xlarge x1e.4xlarge r5n.4xlarge u-18tb1.112xlarge r7a.large inf2.48xlarge r7iz.12xlarge c6id.metal m8g.2xlarge i7ie.large x8g.48xlarge m5.xlarge r5ad.large c5.2xlarge m6g.12xlarge m2.4xlarge c8g.8xlarge m7g.16xlarge m7i-flex.large r8g.16xlarge i7i.large r8i.32xlarge m5.4xlarge t4g.micro m7i.metal-48xl i7ie.xlarge c5d.18xlarge m6id.4xlarge m5.large m5dn.16xlarge g6.24xlarge m6g.xlarge t2.medium r7g.4xlarge r6i.32xlarge m6in.2xlarge r6a.metal r8i.48xlarge r7g.8xlarge c7i.12xlarge i7i.48xlarge m7gd.2xlarge inf2.8xlarge m5a.8xlarge r5d.metal m1.medium g5g.xlarge m6i.24xlarge m6i.8xlarge m6id.8xlarge r5dn.24xlarge im4gn.2xlarge r5a.12xlarge m7g.xlarge x1e.16xlarge c8gd.large c5ad.16xlarge i4i.4xlarge c3.xlarge r7i.large r7g.12xlarge r4.4xlarge c6id.2xlarge c7a.12xlarge x8g.2xlarge m8i.16xlarge r6in.large m7g.8xlarge c5ad.2xlarge m8i.2xlarge m6in.12xlarge r7i.xlarge m7g.metal c5n.xlarge c6a.12xlarge c6i.metal hpc7g.8xlarge x2iedn.24xlarge c5a.large c4.large u-9tb1.112xlarge c7i.16xlarge r5n.16xlarge r6id.metal m7i.16xlarge r8i.large c6g.2xlarge vt1.24xlarge c7gn.2xlarge x8g.metal-48xl m5ad.16xlarge r7a.medium r8g.12xlarge m6i.metal a1.4xlarge hpc7g.16xlarge m5dn.24xlarge r6id.4xlarge r5dn.metal m8g.4xlarge x1.32xlarge c7a.metal-48xl i4i.16xlarge r8i.24xlarge t1.micro c7i.8xlarge r8g.48xlarge r6gd.12xlarge r7iz.2xlarge g4dn.16xlarge m6id.xlarge m7g.large t3a.medium r5b.24xlarge c5d.4xlarge r4.xlarge r8i-flex.12xlarge r5a.large c6g.4xlarge m6g.2xlarge c7g.12xlarge x8g.large r5b.12xlarge c5a.xlarge m5d.metal t2.nano c7a.large c7a.xlarge t3a.small i3.8xlarge x2idn.24xlarge m5d.16xlarge c6in.large r5dn.16xlarge x2iezn.2xlarge x1e.xlarge m5d.12xlarge c6gd.2xlarge r7iz.32xlarge a1.medium u-6tb1.56xlarge x2idn.32xlarge i8g.12xlarge c6a.8xlarge m6a.large c6i.xlarge r7iz.8xlarge r5.24xlarge r5a.16xlarge r6a.8xlarge m5dn.4xlarge c8g.metal-48xl r8g.metal-48xl m6a.48xlarge x2gd.metal d3en.4xlarge i8g.48xlarge c7a.4xlarge g5g.8xlarge c6gn.12xlarge m7gd.xlarge u-6tb1.112xlarge im4gn.16xlarge g5g.16xlarge c7g.16xlarge c5ad.4xlarge x2idn.metal i3.4xlarge p4de.24xlarge c4.2xlarge g6e.8xlarge p3dn.24xlarge r6a.2xlarge r8gd.16xlarge r5ad.16xlarge u7i-8tb.112xlarge m5.8xlarge m7gd.12xlarge r8i.12xlarge r4.2xlarge d3en.6xlarge c8gd.4xlarge r7i.2xlarge i7i.16xlarge c6a.metal r5d.24xlarge c6gd.medium i7i.24xlarge m8g.medium m5a.2xlarge r6id.xlarge m6idn.24xlarge c5.12xlarge i3en.6xlarge r6a.12xlarge c6g.medium t3.small r8i.4xlarge mac2-m2pro.metal t2.micro c8gd.12xlarge g6.4xlarge trn1.2xlarge m8gd.large r6i.8xlarge d2.xlarge r5n.large r7iz.xlarge z1d.xlarge p3.2xlarge c7i.metal-48xl c7i.48xlarge is4gen.4xlarge r5dn.8xlarge i7ie.48xlarge r6in.8xlarge c7gd.8xlarge t3a.micro r7iz.metal-32xl i2.xlarge r8i-flex.4xlarge t2.xlarge c4.xlarge i3en.12xlarge m7gd.16xlarge r5ad.12xlarge x8g.medium c6id.32xlarge c3.4xlarge i3en.metal c7a.48xlarge r8g.4xlarge r6gd.metal c5.24xlarge c7i.4xlarge m6gd.metal c6g.12xlarge c6gn.medium g4dn.4xlarge p5en.48xlarge r7a.16xlarge im4gn.xlarge g5.24xlarge r8gd.medium m6i.12xlarge c6gd.large g4ad.16xlarge c7gn.4xlarge m5n.2xlarge m6idn.large c6gn.xlarge m3.2xlarge c5a.16xlarge r6g.xlarge r7i.4xlarge c5ad.8xlarge x2gd.large r6gd.16xlarge m7i.12xlarge m5d.xlarge c6in.8xlarge x2gd.8xlarge m7g.4xlarge r5b.large r6in.16xlarge g5g.2xlarge h1.8xlarge c7i.2xlarge g4dn.metal r5ad.8xlarge r6a.48xlarge m8i.32xlarge a1.metal r6g.metal m6gd.2xlarge r6id.16xlarge x1e.2xlarge g6.48xlarge m7g.12xlarge gr6.4xlarge c6i.12xlarge is4gen.8xlarge c7gn.12xlarge c5d.12xlarge d3en.8xlarge c8gd.metal-24xl m8gd.2xlarge r5d.2xlarge m6idn.8xlarge f1.4xlarge c7a.24xlarge m5.12xlarge m4.2xlarge g5g.4xlarge m8gd.8xlarge c6id.xlarge c6g.metal m5dn.2xlarge mac2-m1ultra.metal r8g.metal-24xl i7ie.18xlarge c6in.xlarge r7i.16xlarge z1d.large inf1.24xlarge is4gen.medium g6f.4xlarge c6in.4xlarge c3.large m6id.2xlarge r6idn.8xlarge m6g.16xlarge m8i.96xlarge g4dn.8xlarge c7i-flex.xlarge r8i.xlarge r5.xlarge u7i-12tb.224xlarge i4g.large d3.xlarge x2iedn.metal gr6.8xlarge m6gd.4xlarge t3.xlarge c5a.12xlarge g6f.large r6in.12xlarge m6i.16xlarge m8i.48xlarge r5n.8xlarge r8gd.metal-48xl c6id.12xlarge m8i-flex.12xlarge r3.8xlarge m8i-flex.16xlarge m6in.metal m6i.xlarge m3.large m5zn.large m6idn.metal r5a.24xlarge r7a.32xlarge inf1.xlarge t3a.large r3.xlarge m5ad.24xlarge m5.2xlarge mac2-m2.metal c6a.48xlarge r7iz.16xlarge r5b.metal t4g.2xlarge i8g.8xlarge t3a.nano r8gd.2xlarge i4g.2xlarge t3.nano m8i-flex.4xlarge g6e.xlarge t4g.nano c7gd.16xlarge m5ad.8xlarge c7i-flex.4xlarge m8gd.48xlarge m5a.24xlarge g6e.24xlarge x2iedn.2xlarge c6gn.4xlarge c6gd.16xlarge r7gd.medium c6a.xlarge c8g.xlarge r6in.xlarge is4gen.xlarge c5d.24xlarge i8g.metal-24xl r6gd.8xlarge c6a.2xlarge c6gd.4xlarge r7a.48xlarge m7a.48xlarge m4.10xlarge c8g.4xlarge c7gd.medium c5a.4xlarge r4.large r5n.metal m7i-flex.2xlarge c1.medium i2.8xlarge c7i.xlarge c5d.metal c5a.8xlarge g6e.2xlarge m8i-flex.2xlarge r6g.8xlarge x2idn.16xlarge im4gn.4xlarge c6in.metal x2gd.2xlarge r6i.4xlarge r7g.large i7ie.2xlarge m6in.24xlarge i8g.24xlarge c7i.metal-24xl trn1n.32xlarge c6in.12xlarge m6gd.16xlarge c6a.4xlarge x8g.16xlarge c7gn.8xlarge m6idn.32xlarge m7a.12xlarge m2.xlarge c6a.large m5n.metal m7i.metal-24xl r7gd.16xlarge c5.xlarge u-3tb1.56xlarge m7a.24xlarge m6gd.large m5n.xlarge r5n.12xlarge c7g.4xlarge m7a.16xlarge i7i.metal-24xl c5.18xlarge m5n.16xlarge m5n.large x2iezn.8xlarge c8gd.24xlarge x2iedn.32xlarge m5dn.xlarge r3.2xlarge r5b.16xlarge i7ie.metal-48xl i3.xlarge c8g.48xlarge i3en.3xlarge u7in-16tb.224xlarge m7a.4xlarge r6idn.large g4dn.2xlarge m7g.medium c5d.xlarge d2.8xlarge r7g.2xlarge r5n.2xlarge m6in.4xlarge r5b.xlarge c6i.24xlarge c5a.2xlarge r6in.24xlarge f2.6xlarge r8gd.4xlarge t2.large f2.12xlarge m5.metal m5d.24xlarge r8g.2xlarge x2iedn.8xlarge r6g.4xlarge r7i.metal-24xl r8i.metal-96xl m7a.xlarge m6a.4xlarge m8gd.4xlarge u-12tb1.112xlarge m5d.large i4i.2xlarge f1.2xlarge inf2.24xlarge m8gd.metal-24xl im4gn.large m8g.metal-48xl r6in.32xlarge r5d.large m7i-flex.4xlarge i8g.16xlarge m7i-flex.xlarge m7i.48xlarge m6i.2xlarge c7i-flex.large m7i.24xlarge r7gd.2xlarge m8gd.xlarge g6e.16xlarge r7iz.metal-16xl m7i.2xlarge i4i.metal i3en.large c6gd.8xlarge t3a.2xlarge g6.8xlarge m6idn.16xlarge m6gd.12xlarge i4i.24xlarge c6g.large r7gd.4xlarge i7ie.6xlarge m5n.24xlarge r6a.xlarge m7gd.medium r8gd.large m5n.4xlarge x2gd.4xlarge c6i.large c6in.2xlarge c7gd.2xlarge c8g.medium i7ie.3xlarge t4g.small m7i.large m7i.xlarge c7gd.4xlarge r3.large m8gd.24xlarge r6id.large m6id.24xlarge c3.8xlarge m6id.32xlarge c7i-flex.2xlarge c5d.9xlarge i8g.xlarge d3.4xlarge m7i-flex.8xlarge m5d.4xlarge m4.xlarge c5ad.large i3en.24xlarge i4g.xlarge r6a.24xlarge c5d.large m5zn.2xlarge a1.xlarge m7i-flex.16xlarge m7gd.4xlarge r8gd.48xlarge g5g.metal trn1.32xlarge m6i.large r5n.24xlarge p4d.24xlarge c8gn.medium c6gd.12xlarge c8gd.medium z1d.metal r7iz.4xlarge m6in.16xlarge x8g.8xlarge c7i-flex.8xlarge r7iz.large r8gd.8xlarge i4g.4xlarge m5zn.3xlarge r5d.4xlarge m8i.4xlarge c8gd.8xlarge r5n.xlarge r5ad.4xlarge m7gd.large m6id.12xlarge m5zn.6xlarge c6id.24xlarge c7gd.large m4.16xlarge m3.xlarge i4i.large m8g.large m8i.24xlarge x8g.xlarge d3en.xlarge u-24tb1.112xlarge m7gd.metal r6gd.4xlarge m7g.2xlarge x2iedn.16xlarge r6a.16xlarge d3en.12xlarge x2gd.medium c7gn.medium c5.metal r5.2xlarge c7gd.metal m6a.24xlarge r7g.16xlarge x2gd.16xlarge c6gn.16xlarge g5.2xlarge r8gd.xlarge i7i.12xlarge r6in.4xlarge r5b.8xlarge u7in-32tb.224xlarge h1.4xlarge m5d.8xlarge r6idn.2xlarge m5n.8xlarge c6in.32xlarge i4i.xlarge r8i-flex.16xlarge r5a.8xlarge i4i.12xlarge c7gn.metal r6id.12xlarge r6id.32xlarge r7gd.metal d3en.2xlarge i8g.large r6g.2xlarge m8i.12xlarge m6idn.12xlarge m6a.metal c6id.16xlarge x8g.metal-24xl r5a.2xlarge i8g.4xlarge x2iezn.4xlarge c7a.medium c8g.large r3.4xlarge r5dn.xlarge r6in.2xlarge c6a.16xlarge r5d.16xlarge r8g.xlarge g4ad.4xlarge r8i.2xlarge c5.9xlarge m7a.metal-48xl r7a.xlarge r6g.medium is4gen.2xlarge c6g.16xlarge r7gd.xlarge i3en.2xlarge r8g.medium t3.micro a1.2xlarge d2.4xlarge m3.medium a1.large r5.large m5d.2xlarge r7a.12xlarge m5ad.4xlarge c6id.large m1.xlarge m6idn.xlarge c8g.12xlarge m8gd.medium r8g.24xlarge m8g.24xlarge inf1.6xlarge r5.16xlarge r6i.16xlarge m7a.8xlarge r6in.metal c6i.4xlarge i7i.8xlarge m8i.large r6i.xlarge c1.xlarge g5.4xlarge m6i.4xlarge gr6f.4xlarge r8i.8xlarge m5a.16xlarge c6i.16xlarge m6gd.8xlarge d2.2xlarge m5.16xlarge r7a.8xlarge g4ad.8xlarge inf1.2xlarge i7i.4xlarge r5ad.xlarge m7i.4xlarge c4.4xlarge m6id.16xlarge m7a.2xlarge i3.2xlarge g6f.xlarge p5.48xlarge r5dn.12xlarge r5dn.2xlarge m5a.12xlarge u7in-24tb.224xlarge r6g.16xlarge c6id.8xlarge c5d.2xlarge r5a.4xlarge x2iedn.4xlarge r6g.large r7i.48xlarge f1.16xlarge r6i.metal r6id.8xlarge m8i-flex.large x1e.8xlarge c6gd.metal r6gd.large r6gd.xlarge m2.2xlarge c5.large p3.8xlarge r8i.96xlarge r6idn.12xlarge m6g.medium i2.2xlarge x2iedn.xlarge c8gn.16xlarge i4g.16xlarge is4gen.large p5e.48xlarge m5dn.12xlarge r7a.metal-48xl m6a.2xlarge m6idn.4xlarge i2.4xlarge x1e.32xlarge r7a.2xlarge c7i.24xlarge c7g.metal i7i.metal-48xl x8g.4xlarge c7a.8xlarge c6a.32xlarge r7g.medium c8gn.12xlarge t4g.xlarge x1.16xlarge t3.2xlarge r5d.12xlarge r6gd.medium c8gd.48xlarge m8g.xlarge m8g.16xlarge g6.16xlarge m5dn.metal t4g.medium r6id.24xlarge r6idn.16xlarge g5.12xlarge r6a.4xlarge m6in.8xlarge r8i.metal-48xl c7a.32xlarge c8gn.48xlarge i7ie.metal-24xl m6a.8xlarge g6e.12xlarge c8gn.4xlarge t4g.large c7gn.16xlarge m5ad.xlarge f2.48xlarge z1d.3xlarge m8gd.metal-48xl r6i.24xlarge r5dn.large]
+I0110 06:16:57.631215       1 aws_manager.go:79] AWS SDK Version: 1.48.7
+I0110 06:16:57.631307       1 auto_scaling_groups.go:428] Regenerating instance to ASG map for ASG names: []
+I0110 06:16:57.631316       1 auto_scaling_groups.go:435] Regenerating instance to ASG map for ASG tags: map[k8s.io/cluster-autoscaler/eks-cluster-test: k8s.io/cluster-autoscaler/enabled:]
+I0110 06:16:57.788097       1 auto_scaling_groups.go:165] Registering ASG eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46
+I0110 06:16:57.788137       1 aws_wrapper.go:710] 0 launch configurations to query
+I0110 06:16:57.788143       1 aws_wrapper.go:711] 0 launch templates to query
+I0110 06:16:57.788148       1 aws_wrapper.go:731] Successfully queried 0 launch configurations
+I0110 06:16:57.788153       1 aws_wrapper.go:742] Successfully queried 0 launch templates
+I0110 06:16:57.788159       1 aws_wrapper.go:753] Successfully queried instance requirements for 0 ASGs
+I0110 06:16:57.788177       1 auto_scaling_groups.go:487] Extracted autoscaling options from "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46" ASG tags: map[]
+I0110 06:16:57.788187       1 aws_manager.go:132] Refreshed ASG list, next refresh after 2026-01-10 06:17:57.78818509 +0000 UTC m=+64.855365144
+I0110 06:16:57.788315       1 static_autoscaler.go:146] Creating new static autoscaler with opts: {{0.5 0.5 10m0s 20m0s 15m0s false false false} 0 320000 0 6871947673600000 0 [] [asg:tag=k8s.io/cluster-autoscaler/enabled,k8s.io/cluster-autoscaler/eks-cluster-test] binpacking least-waste   false 600 [] 45 3 true false  aws [] false true true 10m0s 0s 3m0s false 30 0.1 50 30s <nil> 2m0s true cluster-autoscaler-status false kube-system  5m0s -10 false 0s 10 3s 2m0s [] [] [] [] false {1 5s  0xc000b58d78 false} {  application/vnd.kubernetes.protobuf 10 5} false true false true cluster-autoscaler 5m0s 30m0s 3h0m0s 10 1 false 1000 10s 5m0s 0s false false true 0 1h0m0s 5s {0.05 0.05 0.015} false map[] false false 1m0s 10m0s 1000 false 10 10s false false false 16  10m0s 15m0s false false :8085 false false 10s false 87600h0m0s false 5000 0s false false}
+I0110 06:16:57.788620       1 main.go:272] Initializing resource informers, blocking until caches are synced
+I0110 06:16:57.788694       1 reflector.go:358] "Starting reflector" type="*v1.StorageClass" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.788711       1 reflector.go:404] "Listing and watching" type="*v1.StorageClass" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.788765       1 reflector.go:358] "Starting reflector" type="*v1.Node" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.788798       1 reflector.go:404] "Listing and watching" type="*v1.Node" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.788946       1 reflector.go:358] "Starting reflector" type="*v1.CSIDriver" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.788956       1 reflector.go:404] "Listing and watching" type="*v1.CSIDriver" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.788968       1 reflector.go:358] "Starting reflector" type="*v1.StatefulSet" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.788976       1 reflector.go:404] "Listing and watching" type="*v1.StatefulSet" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.789104       1 reflector.go:358] "Starting reflector" type="*v1.Namespace" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.789111       1 reflector.go:404] "Listing and watching" type="*v1.Namespace" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.789282       1 reflector.go:358] "Starting reflector" type="*v1.PersistentVolume" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.789405       1 reflector.go:404] "Listing and watching" type="*v1.PersistentVolume" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.789522       1 reflector.go:358] "Starting reflector" type="*v1.Pod" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.789556       1 reflector.go:404] "Listing and watching" type="*v1.Pod" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.789717       1 reflector.go:358] "Starting reflector" type="*v1.VolumeAttachment" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.790080       1 reflector.go:404] "Listing and watching" type="*v1.VolumeAttachment" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.789859       1 reflector.go:358] "Starting reflector" type="*v1.CSIStorageCapacity" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.790316       1 reflector.go:404] "Listing and watching" type="*v1.CSIStorageCapacity" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.789924       1 reflector.go:358] "Starting reflector" type="*v1.CSINode" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.790401       1 reflector.go:404] "Listing and watching" type="*v1.CSINode" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.789964       1 reflector.go:358] "Starting reflector" type="*v1.PodDisruptionBudget" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.790660       1 reflector.go:404] "Listing and watching" type="*v1.PodDisruptionBudget" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.790000       1 reflector.go:358] "Starting reflector" type="*v1.Job" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.790787       1 reflector.go:404] "Listing and watching" type="*v1.Job" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.789897       1 reflector.go:358] "Starting reflector" type="*v1.DaemonSet" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.790873       1 reflector.go:404] "Listing and watching" type="*v1.DaemonSet" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.790017       1 reflector.go:358] "Starting reflector" type="*v1.Service" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.791005       1 reflector.go:404] "Listing and watching" type="*v1.Service" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.790034       1 reflector.go:358] "Starting reflector" type="*v1.ReplicationController" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.791085       1 reflector.go:404] "Listing and watching" type="*v1.ReplicationController" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.790053       1 reflector.go:358] "Starting reflector" type="*v1.ReplicaSet" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.791242       1 reflector.go:404] "Listing and watching" type="*v1.ReplicaSet" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.789942       1 reflector.go:358] "Starting reflector" type="*v1.PersistentVolumeClaim" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.791293       1 reflector.go:404] "Listing and watching" type="*v1.PersistentVolumeClaim" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.794555       1 reflector.go:436] "Caches populated" type="*v1.Node" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.794585       1 reflector.go:436] "Caches populated" type="*v1.CSIDriver" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.794779       1 reflector.go:436] "Caches populated" type="*v1.Namespace" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.794825       1 reflector.go:436] "Caches populated" type="*v1.StorageClass" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.794932       1 reflector.go:436] "Caches populated" type="*v1.StatefulSet" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.795090       1 reflector.go:436] "Caches populated" type="*v1.VolumeAttachment" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.795135       1 reflector.go:436] "Caches populated" type="*v1.PersistentVolume" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.795311       1 reflector.go:436] "Caches populated" type="*v1.CSINode" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.795767       1 reflector.go:436] "Caches populated" type="*v1.CSIStorageCapacity" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.798065       1 reflector.go:436] "Caches populated" type="*v1.Pod" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:57.989698       1 request.go:683] "Waited before sending request" delay="198.882043ms" reason="client-side throttling, not priority and fairness" verb="GET" URL="https://10.100.0.1:443/apis/policy/v1/poddisruptionbudgets?limit=500&resourceVersion=0"
+I0110 06:16:57.992235       1 reflector.go:436] "Caches populated" type="*v1.PodDisruptionBudget" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:58.189342       1 request.go:683] "Waited before sending request" delay="398.396231ms" reason="client-side throttling, not priority and fairness" verb="GET" URL="https://10.100.0.1:443/apis/batch/v1/jobs?limit=500&resourceVersion=0"
+I0110 06:16:58.192522       1 reflector.go:436] "Caches populated" type="*v1.Job" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:58.389071       1 request.go:683] "Waited before sending request" delay="598.071112ms" reason="client-side throttling, not priority and fairness" verb="GET" URL="https://10.100.0.1:443/apis/apps/v1/daemonsets?limit=500&resourceVersion=0"
+I0110 06:16:58.392585       1 reflector.go:436] "Caches populated" type="*v1.DaemonSet" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:58.589262       1 request.go:683] "Waited before sending request" delay="798.125696ms" reason="client-side throttling, not priority and fairness" verb="GET" URL="https://10.100.0.1:443/api/v1/services?limit=500&resourceVersion=0"
+I0110 06:16:58.591823       1 reflector.go:436] "Caches populated" type="*v1.Service" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:58.789223       1 request.go:683] "Waited before sending request" delay="997.907642ms" reason="client-side throttling, not priority and fairness" verb="GET" URL="https://10.100.0.1:443/apis/apps/v1/replicasets?limit=500&resourceVersion=0"
+I0110 06:16:58.792102       1 reflector.go:436] "Caches populated" type="*v1.ReplicaSet" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:58.989162       1 request.go:683] "Waited before sending request" delay="1.197817693s" reason="client-side throttling, not priority and fairness" verb="GET" URL="https://10.100.0.1:443/api/v1/persistentvolumeclaims?limit=500&resourceVersion=0"
+I0110 06:16:58.989203       1 request.go:752] "Waited before sending request" delay="1.197817693s" reason="client-side throttling, not priority and fairness" verb="GET" URL="https://10.100.0.1:443/api/v1/persistentvolumeclaims?limit=500&resourceVersion=0"
+I0110 06:16:58.992577       1 reflector.go:436] "Caches populated" type="*v1.PersistentVolumeClaim" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:59.189327       1 request.go:683] "Waited before sending request" delay="1.397917943s" reason="client-side throttling, not priority and fairness" verb="GET" URL="https://10.100.0.1:443/api/v1/replicationcontrollers?limit=500&resourceVersion=0"
+I0110 06:16:59.191614       1 reflector.go:436] "Caches populated" type="*v1.ReplicationController" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:59.289623       1 reflector.go:358] "Starting reflector" type="*v1.Pod" resyncPeriod="1h0m0s" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:59.289650       1 reflector.go:404] "Listing and watching" type="*v1.Pod" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:16:59.289680       1 main.go:90] Registered cleanup signal handler
+I0110 06:16:59.289711       1 node_instances_cache.go:156] Start refreshing cloud provider node instances cache
+I0110 06:16:59.289723       1 node_instances_cache.go:168] Refresh cloud provider node instances cache finished, refresh took 7.098µs
+I0110 06:16:59.291998       1 reflector.go:436] "Caches populated" type="*v1.Pod" reflector="pkg/mod/k8s.io/client-go@v0.34.2/tools/cache/reflector.go:290"
+I0110 06:17:09.290762       1 static_autoscaler.go:270] Starting main loop
+I0110 06:17:09.291554       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+E0110 06:17:09.386849       1 managed_nodegroup_cache.go:136] Failed to query the managed nodegroup eks-node-group for the cluster eks-cluster-test while looking for labels/taints/tags: AccessDeniedException: User: arn:aws:sts::678957989472:assumed-role/EKSServiceAccountRole/1768025813642717032 is not authorized to perform: eks:DescribeNodegroup on resource: arn:aws:eks:ap-southeast-2:678957989472:nodegroup/eks-cluster-test/eks-node-group/96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46 because no identity-based policy allows the eks:DescribeNodegroup action
+E0110 06:17:09.386882       1 aws_manager.go:308] Failed to get labels from EKS DescribeNodegroup API for nodegroup eks-node-group in cluster eks-cluster-test because AccessDeniedException: User: arn:aws:sts::678957989472:assumed-role/EKSServiceAccountRole/1768025813642717032 is not authorized to perform: eks:DescribeNodegroup on resource: arn:aws:eks:ap-southeast-2:678957989472:nodegroup/eks-cluster-test/eks-node-group/96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46 because no identity-based policy allows the eks:DescribeNodegroup action.
+W0110 06:17:09.386945       1 clusterstate.go:493] AcceptableRanges have not been populated yet. Skip checking
+I0110 06:17:09.387039       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:17:09.387053       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:17:09.387082       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:17:09.387241       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:17:09.387280       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:17:09.387297       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:17:09.387324       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:17:09.387338       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:17:09.387409       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:17:09.387480       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:17:19.400317       1 static_autoscaler.go:270] Starting main loop
+I0110 06:17:19.401041       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:17:19.401269       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:17:19.401294       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:17:19.401309       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:17:19.401314       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:17:19.401330       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:17:19.401345       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:17:19.401358       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:17:19.401366       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:17:19.401398       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:17:19.401427       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:17:29.416165       1 static_autoscaler.go:270] Starting main loop
+I0110 06:17:29.416959       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:17:29.417259       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:17:29.417275       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:17:29.417283       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:17:29.417334       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:17:29.417417       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:17:29.417441       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:17:29.417461       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:17:29.417470       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:17:29.417505       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:17:29.417535       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:17:39.437681       1 static_autoscaler.go:270] Starting main loop
+I0110 06:17:39.438316       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:17:39.438479       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:17:39.438492       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:17:39.438500       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:17:39.438504       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:17:39.438521       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:17:39.438536       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:17:39.438546       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:17:39.438551       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:17:39.438582       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:17:39.438610       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:17:49.452613       1 static_autoscaler.go:270] Starting main loop
+I0110 06:17:49.453318       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:17:49.453502       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:17:49.453517       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:17:49.453525       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:17:49.453530       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:17:49.453545       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:17:49.453565       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:17:49.453576       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:17:49.453582       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:17:49.453612       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:17:49.453640       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:17:59.467424       1 static_autoscaler.go:270] Starting main loop
+I0110 06:17:59.467491       1 auto_scaling_groups.go:428] Regenerating instance to ASG map for ASG names: []
+I0110 06:17:59.467502       1 auto_scaling_groups.go:435] Regenerating instance to ASG map for ASG tags: map[k8s.io/cluster-autoscaler/eks-cluster-test: k8s.io/cluster-autoscaler/enabled:]
+I0110 06:17:59.529536       1 aws_wrapper.go:710] 0 launch configurations to query
+I0110 06:17:59.529557       1 aws_wrapper.go:711] 0 launch templates to query
+I0110 06:17:59.529564       1 aws_wrapper.go:731] Successfully queried 0 launch configurations
+I0110 06:17:59.529570       1 aws_wrapper.go:742] Successfully queried 0 launch templates
+I0110 06:17:59.529576       1 aws_wrapper.go:753] Successfully queried instance requirements for 0 ASGs
+I0110 06:17:59.529583       1 aws_manager.go:132] Refreshed ASG list, next refresh after 2026-01-10 06:18:59.529580534 +0000 UTC m=+126.596760594
+I0110 06:17:59.530128       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:17:59.530292       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:17:59.530307       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:17:59.530314       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:17:59.530318       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:17:59.530336       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:17:59.530359       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:17:59.530374       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:17:59.530380       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:17:59.530419       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:17:59.530449       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:18:09.544092       1 static_autoscaler.go:270] Starting main loop
+I0110 06:18:09.544719       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:18:09.544882       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:18:09.544896       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:18:09.544904       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:18:09.544908       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:18:09.544925       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:18:09.544944       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:18:09.544956       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:18:09.544961       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:18:09.544992       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:18:09.545025       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:18:19.559526       1 static_autoscaler.go:270] Starting main loop
+I0110 06:18:19.560211       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:18:19.560449       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:18:19.560466       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:18:19.560490       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:18:19.560502       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:18:19.560518       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:18:19.560533       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:18:19.560546       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:18:19.560567       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:18:19.560602       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:18:19.560645       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:18:29.575263       1 static_autoscaler.go:270] Starting main loop
+I0110 06:18:29.575974       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:18:29.576196       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:18:29.576211       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:18:29.576219       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:18:29.576223       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:18:29.576239       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:18:29.576277       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:18:29.576337       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:18:29.576375       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:18:29.576460       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:18:29.576524       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:18:39.591255       1 static_autoscaler.go:270] Starting main loop
+I0110 06:18:39.591873       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:18:39.592100       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:18:39.592144       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:18:39.592200       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:18:39.592206       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:18:39.592224       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:18:39.592249       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:18:39.592267       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:18:39.592278       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:18:39.592317       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:18:39.592380       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:18:49.607934       1 static_autoscaler.go:270] Starting main loop
+I0110 06:18:49.608633       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:18:49.608894       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:18:49.608909       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:18:49.608919       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:18:49.608924       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:18:49.608941       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:18:49.608958       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:18:49.608969       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:18:49.608974       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:18:49.609005       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:18:49.609071       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:18:59.290562       1 node_instances_cache.go:156] Start refreshing cloud provider node instances cache
+I0110 06:18:59.290597       1 node_instances_cache.go:168] Refresh cloud provider node instances cache finished, refresh took 8.795µs
+I0110 06:18:59.622378       1 static_autoscaler.go:270] Starting main loop
+I0110 06:18:59.622460       1 auto_scaling_groups.go:428] Regenerating instance to ASG map for ASG names: []
+I0110 06:18:59.622479       1 auto_scaling_groups.go:435] Regenerating instance to ASG map for ASG tags: map[k8s.io/cluster-autoscaler/eks-cluster-test: k8s.io/cluster-autoscaler/enabled:]
+I0110 06:18:59.751299       1 aws_wrapper.go:710] 0 launch configurations to query
+I0110 06:18:59.751320       1 aws_wrapper.go:711] 0 launch templates to query
+I0110 06:18:59.751326       1 aws_wrapper.go:731] Successfully queried 0 launch configurations
+I0110 06:18:59.751331       1 aws_wrapper.go:742] Successfully queried 0 launch templates
+I0110 06:18:59.751337       1 aws_wrapper.go:753] Successfully queried instance requirements for 0 ASGs
+I0110 06:18:59.751347       1 aws_manager.go:132] Refreshed ASG list, next refresh after 2026-01-10 06:19:59.751343786 +0000 UTC m=+186.818523840
+I0110 06:18:59.752035       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:18:59.752353       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:18:59.752370       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:18:59.752377       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:18:59.752396       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:18:59.752416       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:18:59.752435       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:18:59.752448       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:18:59.752471       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:18:59.752519       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:18:59.752555       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:19:09.767310       1 static_autoscaler.go:270] Starting main loop
+I0110 06:19:09.767963       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:19:09.768133       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:19:09.768152       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:19:09.768160       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:19:09.768164       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:19:09.768181       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:19:09.768199       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:19:09.768211       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:19:09.768217       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:19:09.768259       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:19:09.768350       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:19:19.782462       1 static_autoscaler.go:270] Starting main loop
+I0110 06:19:19.783444       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:19:19.783660       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:19:19.783678       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:19:19.783686       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:19:19.783691       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:19:19.783708       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:19:19.783728       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:19:19.783740       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:19:19.783747       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:19:19.783780       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:19:19.783809       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:19:29.798081       1 static_autoscaler.go:270] Starting main loop
+I0110 06:19:29.798739       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:19:29.798976       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:19:29.798998       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:19:29.799007       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:19:29.799011       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:19:29.799027       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:19:29.799042       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:19:29.799053       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:19:29.799058       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:19:29.799088       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:19:29.799116       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:19:39.811231       1 static_autoscaler.go:270] Starting main loop
+I0110 06:19:39.811937       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:19:39.812160       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:19:39.812202       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:19:39.812277       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:19:39.812315       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:19:39.812352       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:19:39.812368       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:19:39.812388       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:19:39.812394       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:19:39.812445       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:19:39.812515       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:19:49.827871       1 static_autoscaler.go:270] Starting main loop
+I0110 06:19:49.828580       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:19:49.828739       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:19:49.828753       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:19:49.828760       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:19:49.828765       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:19:49.828783       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:19:49.828799       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:19:49.828810       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:19:49.828815       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:19:49.828846       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:19:49.828882       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:19:59.844372       1 static_autoscaler.go:270] Starting main loop
+I0110 06:19:59.844447       1 auto_scaling_groups.go:428] Regenerating instance to ASG map for ASG names: []
+I0110 06:19:59.844460       1 auto_scaling_groups.go:435] Regenerating instance to ASG map for ASG tags: map[k8s.io/cluster-autoscaler/eks-cluster-test: k8s.io/cluster-autoscaler/enabled:]
+I0110 06:19:59.956617       1 aws_wrapper.go:710] 0 launch configurations to query
+I0110 06:19:59.956636       1 aws_wrapper.go:711] 0 launch templates to query
+I0110 06:19:59.956642       1 aws_wrapper.go:731] Successfully queried 0 launch configurations
+I0110 06:19:59.956648       1 aws_wrapper.go:742] Successfully queried 0 launch templates
+I0110 06:19:59.956654       1 aws_wrapper.go:753] Successfully queried instance requirements for 0 ASGs
+I0110 06:19:59.956664       1 aws_manager.go:132] Refreshed ASG list, next refresh after 2026-01-10 06:20:59.956658679 +0000 UTC m=+247.023838736
+I0110 06:19:59.957331       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:19:59.957495       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:19:59.957509       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:19:59.957516       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:19:59.957521       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:19:59.957537       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:19:59.957555       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:19:59.957565       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:19:59.957570       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:19:59.957601       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:19:59.957629       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:20:10.208108       1 static_autoscaler.go:270] Starting main loop
+I0110 06:20:10.208790       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:20:10.209052       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:20:10.209079       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:20:10.209088       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:20:10.209092       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:20:10.209108       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:20:10.209138       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:20:10.209152       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:20:10.209159       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:20:10.209192       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:20:10.209271       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:20:20.228428       1 static_autoscaler.go:270] Starting main loop
+I0110 06:20:20.229071       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:20:20.229233       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:20:20.229242       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:20:20.229249       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:20:20.229254       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:20:20.229271       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:20:20.229286       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:20:20.229296       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:20:20.229301       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:20:20.229331       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:20:20.229359       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:20:30.244473       1 static_autoscaler.go:270] Starting main loop
+I0110 06:20:30.245234       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:20:30.245440       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:20:30.245459       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:20:30.245470       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:20:30.245474       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:20:30.245492       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:20:30.245507       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:20:30.245518       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:20:30.245523       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:20:30.245556       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:20:30.245582       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:20:40.355710       1 static_autoscaler.go:270] Starting main loop
+I0110 06:20:40.356422       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:20:40.356669       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:20:40.356686       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:20:40.356694       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:20:40.356698       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:20:40.356715       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:20:40.356730       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:20:40.356741       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:20:40.356746       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:20:40.356778       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:20:40.356806       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:20:50.373429       1 static_autoscaler.go:270] Starting main loop
+I0110 06:20:50.374151       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:20:50.374446       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:20:50.374463       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:20:50.374470       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:20:50.374475       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:20:50.374514       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:20:50.374534       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:20:50.374550       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:20:50.374559       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:20:50.374591       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:20:50.374619       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:20:59.291319       1 node_instances_cache.go:156] Start refreshing cloud provider node instances cache
+I0110 06:20:59.291356       1 node_instances_cache.go:168] Refresh cloud provider node instances cache finished, refresh took 9.758µs
+I0110 06:21:00.387740       1 static_autoscaler.go:270] Starting main loop
+I0110 06:21:00.387835       1 auto_scaling_groups.go:428] Regenerating instance to ASG map for ASG names: []
+I0110 06:21:00.387850       1 auto_scaling_groups.go:435] Regenerating instance to ASG map for ASG tags: map[k8s.io/cluster-autoscaler/eks-cluster-test: k8s.io/cluster-autoscaler/enabled:]
+I0110 06:21:00.481470       1 aws_wrapper.go:710] 0 launch configurations to query
+I0110 06:21:00.481488       1 aws_wrapper.go:711] 0 launch templates to query
+I0110 06:21:00.481494       1 aws_wrapper.go:731] Successfully queried 0 launch configurations
+I0110 06:21:00.481499       1 aws_wrapper.go:742] Successfully queried 0 launch templates
+I0110 06:21:00.481505       1 aws_wrapper.go:753] Successfully queried instance requirements for 0 ASGs
+I0110 06:21:00.481512       1 aws_manager.go:132] Refreshed ASG list, next refresh after 2026-01-10 06:22:00.481509745 +0000 UTC m=+307.548689799
+I0110 06:21:00.482205       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:21:00.482449       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:21:00.482460       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:21:00.482467       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:21:00.482471       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:21:00.482489       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:21:00.482504       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:21:00.482514       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:21:00.482519       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:21:00.482549       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:21:00.482574       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:21:10.522165       1 static_autoscaler.go:270] Starting main loop
+I0110 06:21:10.522956       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:21:10.523353       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:21:10.523372       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:21:10.523382       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:21:10.523388       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:21:10.523412       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:21:10.523437       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:21:10.523457       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:21:10.523465       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:21:10.523512       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:21:10.523555       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:21:20.538928       1 static_autoscaler.go:270] Starting main loop
+I0110 06:21:20.539842       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:21:20.540070       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:21:20.540088       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:21:20.540099       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:21:20.540107       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:21:20.540163       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:21:20.540190       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:21:20.540209       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:21:20.540219       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:21:20.540267       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:21:20.540343       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
+I0110 06:21:30.556058       1 static_autoscaler.go:270] Starting main loop
+I0110 06:21:30.556645       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-eks-node-group-96cdd1a8-a702-578b-a6a4-ac5d3fa8cd46"; using ap-southeast-2b for failure-domain.beta.kubernetes.io/zone label
+I0110 06:21:30.556863       1 filter_out_schedulable.go:65] Filtering out schedulables
+I0110 06:21:30.556877       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I0110 06:21:30.556884       1 filter_out_schedulable.go:85] No schedulable pods
+I0110 06:21:30.556888       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I0110 06:21:30.556905       1 static_autoscaler.go:520] No unschedulable pods
+I0110 06:21:30.556920       1 static_autoscaler.go:559] Calculating unneeded nodes
+I0110 06:21:30.556933       1 pre_filtering_processor.go:67] Skipping ip-192-168-234-6.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:21:30.556938       1 pre_filtering_processor.go:67] Skipping ip-192-168-9-12.ap-southeast-2.compute.internal - node group min size reached (current: 2, min: 2)
+I0110 06:21:30.556969       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownDeleteTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 lastScaleDownFailTime=2026-01-10 05:16:57.788510429 +0000 UTC m=-3595.144309509 scaleDownForbidden=false scaleDownInCooldown=false
+I0110 06:21:30.556998       1 static_autoscaler.go:624] Starting scale down: no scale down candidates. skipping...
