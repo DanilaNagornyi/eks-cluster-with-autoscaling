@@ -287,12 +287,24 @@ aws iam delete-policy --policy-arn arn:aws:iam::<YOUR_ACCOUNT_ID>:policy/EKSClus
 - Default wait time before removing a node: 10 minutes
 - Nodes with certain pods will not be removed (can be configured via annotations)
 
+## 🏭 Production considerations
+
+- **Karpenter** instead of Cluster Autoscaler for faster, bin-packed provisioning and spot/on-demand mixing.
+- **PodDisruptionBudgets** on every stateful or latency-sensitive workload so scale-down stays safe.
+- **HPA + metrics-server** alongside the node autoscaler — pods scale first, nodes follow.
+- **Least-privilege IRSA** — the custom policy here is broad; scope it to the cluster's ASG tags.
+- **Logs** — ship autoscaler logs to CloudWatch/Loki rather than keeping them in the repo.
+
 ## 📝 License
 
-This project is created for educational purposes.
+MIT
 
 ---
 
 **Region:** ap-southeast-2 (Sydney)  
 **Cluster Autoscaler Version:** v1.34.2  
 **Kubernetes Version:** 1.28+
+
+---
+
+_Built as a hands-on lab during the [TechWorld with Nana DevOps Bootcamp](https://www.credly.com/go/kWb3uHky), then extended and documented independently._

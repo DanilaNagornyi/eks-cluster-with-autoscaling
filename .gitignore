@@ -1,2 +1,6 @@
 .idea
 /.idea/misc.xml
+
+# logs
+*.log
+as-logs.txt
